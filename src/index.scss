@@ -16,6 +16,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: $generalPadding;
 }
 
 * {
@@ -31,11 +32,11 @@ body {
   text-align: center;
 }
 
+// HEADER
 header {
   display: flex;
   flex-direction: column;
   justify-items: center;
-  padding: $generalPadding;
 }
 
 hr {
@@ -97,3 +98,9 @@ link:active {
   padding-left: 1rem;
   border-left: solid 1px black;
 }
+
+// MISSIONS
+
+// ROCKETS
+
+// MY PROFILE

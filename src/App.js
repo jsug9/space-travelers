@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import MissionsContainer from './pages/MissionsContainer';
 import RocketsContainer from './pages/RocketsContainer';
@@ -11,7 +12,7 @@ import ProfileContainer from './pages/ProfileContainer';
 
 const App = () => (
   <main>
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <header>
         <Navbar />
         <hr />

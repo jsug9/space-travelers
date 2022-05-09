@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Bookstore
+# Space Travelers
 
-> In this project I build a mobile and desktop version of a Bookstore app, using React.
+> Space Travelers is an app that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions. It uses real live data from the SpaceX API.
 
 ## Built With
 
@@ -10,11 +10,10 @@
 - JavaScript
 - React
 - Redux
-- Zeplin
 
 ## Live Demo
 
-- [GitHub Deploy](https://jsug9.github.io/bookstore/).
+- [GitHub Deploy](https://jsug9.github.io/space-travelers/).
 
 ## Getting Started
 
@@ -22,24 +21,29 @@ To get a local copy of the project, follow these steps:
 1. Open the terminal and navigate to the folder where you would like to put these files.
 2. Type the following commands into the terminal: 
  ```
- git clone https://github.com/jsug9/bookstore
+ git clone https://github.com/jsug9/space-travelers
  ```
  ```
- cd bookstore
+ cd space-travelers
  ```
 
-## Author
+## Authors
 
 👤 **Augusto Galindo**
 
 - GitHub: [@jsug9](https://github.com/jsug9)
 - LinkedIn: [Augusto Galindo](https://www.linkedin.com/in/augustogalindo/)
 
+👤 **John Arboleda**
+
+- GitHub: [@John-Arboleda](https://github.com/John-Arboleda)
+- LinkedIn: [@john-arboleda](https://www.linkedin.com/in/john-arboleda/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/jsug9/bookstore/issues).
+Feel free to check the [issues page](https://github.com/jsug9/space-travelers/issues).
 ## Show your support
 
 Give a ⭐️ if you like this project!

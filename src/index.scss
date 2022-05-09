@@ -86,6 +86,11 @@ li {
 .link,
 link:active {
   color: #7aaaf9;
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: underline;
 }
 
 .link:nth-child(3) {

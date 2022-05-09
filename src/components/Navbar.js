@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../assets/planet.png';
 
 const Navbar = () => {
   const links = [
@@ -22,6 +23,7 @@ const Navbar = () => {
 
   return (
     <nav>
+      <img src={logo} alt="logo" className="logo" />
       <h3>Space Travelers</h3>
       <ul className="links">
         {links.map((link) => (

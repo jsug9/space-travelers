@@ -23,8 +23,10 @@ const Navbar = () => {
 
   return (
     <nav>
-      <img src={logo} alt="logo" className="logo" />
-      <h1>Space Travelers&apos; Hub</h1>
+      <div className="rightNav">
+        <img src={logo} alt="logo" className="logo" />
+        <h1>Space Travelers&apos; Hub</h1>
+      </div>
       <ul className="links">
         {links.map((link) => (
           <li key={link.id}>

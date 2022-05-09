@@ -2,7 +2,7 @@
 
 # Space Travelers
 
-> Add a nice description here.
+> Space Travelers is an app that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions. It uses real live data from the SpaceX API.
 
 ## Built With
 
@@ -27,14 +27,17 @@ To get a local copy of the project, follow these steps:
  cd space-travelers
  ```
 
-## Author
+## Authors
 
 👤 **Augusto Galindo**
 
 - GitHub: [@jsug9](https://github.com/jsug9)
 - LinkedIn: [Augusto Galindo](https://www.linkedin.com/in/augustogalindo/)
 
-Add Your profile here
+👤 **John Arboleda**
+
+- GitHub: [@John-Arboleda](https://github.com/John-Arboleda)
+- LinkedIn: [@john-arboleda](https://www.linkedin.com/in/john-arboleda/)
 
 ## 🤝 Contributing
 

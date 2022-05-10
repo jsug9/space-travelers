@@ -10,9 +10,9 @@ const getRockets = () => async (dispatch) => {
   const result = await fetchRockets();
   const rockets = result.map((rocket) => ({
     id: rocket.rocket_id,
-    rocketName: rocket.rocket_name,
+    name: rocket.rocket_name,
     description: rocket.description,
-    flickrImage: rocket.flickr_images[0],
+    image: rocket.flickr_images[0],
   }));
   await dispatch({
     type: GET_ROCKETS,

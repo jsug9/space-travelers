@@ -32,8 +32,7 @@ const Navbar = () => {
           <li key={link.id} className="linkLi">
             <NavLink
               to={link.path}
-              className="link"
-              activeClassName="active"
+              className={(navData) => (navData.isActive ? 'active' : 'link')}
             >
               {link.text}
             </NavLink>

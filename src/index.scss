@@ -91,6 +91,7 @@ link:active {
 }
 
 .active {
+  color: #7aaaf9;
   text-decoration: underline;
 }
 
@@ -102,5 +103,51 @@ link:active {
 // MISSIONS
 
 // ROCKETS
+.rocketItemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.imgContainer {
+  width: 50%;
+  padding-top: 2rem;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  align-items: flex-start;
+}
+
+.rocketName {
+  font-size: 20px;
+  margin-bottom: -0.75rem;
+}
+
+.reserveStatus {
+  background-color: #4d9fb6;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 13px;
+  padding: 0 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.reserveButton {
+  padding: 0.6rem;
+  color: white;
+  background-color: #3679f6;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 // MY PROFILE

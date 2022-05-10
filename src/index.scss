@@ -130,7 +130,7 @@ link:active {
   margin-top: -0.1rem;
 }
 
-.reserveStatus {
+.reserveBadge {
   color: white;
   background: #4d9fb6;
   text-align: center;
@@ -138,6 +138,10 @@ link:active {
   font-size: 13px;
   padding: 0 0.3rem;
   margin-right: 0.3rem;
+}
+
+.reserveBadgeDisabled {
+  display: none;
 }
 
 .reserveButton {

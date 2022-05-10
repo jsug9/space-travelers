@@ -1,6 +1,8 @@
 import React from 'react';
 // import { useSelector } from 'react-redux';
-import Missions from '../components/Missions';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Table } from 'react-bootstrap';
+import Mission from '../components/Mission';
 
 function MissionsContainer() {
   // const missions = useSelector((state) => state.missionsReducer);
@@ -25,13 +27,23 @@ function MissionsContainer() {
   };
 
   return (
-    <div>
-      <ul>
+
+    <Table>
+      {/* <h1>Missions</h1> */}
+      <thead>
+        <tr>
+          <th>Mission</th>
+          <th>Description</th>
+          {/* <th>Status</th>
+          <th>Action</th> */}
+        </tr>
+      </thead>
+      <tbody>
         {state.missions.map((mission) => (
-          <li><Missions key={mission.mission_id} mission={mission} /></li>
+          <Mission key={mission.mission_id} mission={mission} />
         ))}
-      </ul>
-    </div>
+      </tbody>
+    </Table>
   );
 }
 

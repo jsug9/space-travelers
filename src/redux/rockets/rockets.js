@@ -21,7 +21,6 @@ const getRockets = () => async (dispatch) => {
     type: GET_ROCKETS,
     payload: rockets,
   });
-  console.log('i am being called');
   isLoading = true;
 };
 

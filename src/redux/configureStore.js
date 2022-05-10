@@ -6,8 +6,8 @@ import missionsReducer from './missions/missions';
 import rocketsReducer from './rockets/rockets';
 
 const rootReducer = combineReducers({
-  books: missionsReducer,
-  categories: rocketsReducer,
+  missions: missionsReducer,
+  rockets: rocketsReducer,
 });
 
 const middleware = applyMiddleware(thunk, logger);

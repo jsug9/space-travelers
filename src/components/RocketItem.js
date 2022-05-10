@@ -11,7 +11,6 @@ const RocketItem = (props) => {
         <h2 className="rocketName">{rocket.rocket_name}</h2>
         <p>
           <span className="reserveStatus">Reserved</span>
-          <span> </span>
           <span className="rocketDescription">{rocket.description}</span>
         </p>
         <button className="reserveButton" type="button">Reserve Rocket</button>

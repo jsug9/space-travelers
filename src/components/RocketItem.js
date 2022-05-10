@@ -6,9 +6,9 @@ const RocketItem = (props) => {
 
   return (
     <div className="rocketItemContainer">
-      <img className="imgContainer" src={rocket.flickrImage} alt="Rocket" />
+      <img className="imgContainer" src={rocket.image} alt="Rocket" />
       <div className="descriptionContainer">
-        <h2 className="rocketName">{rocket.rocket_name}</h2>
+        <h2 className="rocketName">{rocket.name}</h2>
         <p className="rocketDescription">
           <span className="reserveStatus">Reserved</span>
           {rocket.description}
@@ -21,10 +21,10 @@ const RocketItem = (props) => {
 
 RocketItem.propTypes = {
   rocket: PropTypes.exact({
-    rocket_id: PropTypes.string,
-    rocket_name: PropTypes.string,
+    id: PropTypes.string,
+    name: PropTypes.string,
     description: PropTypes.string,
-    flickrImage: PropTypes.string,
+    image: PropTypes.string,
   }).isRequired,
 };
 

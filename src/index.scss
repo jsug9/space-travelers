@@ -105,7 +105,7 @@ link:active {
 // ROCKETS
 .rocketItemContainer {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
   gap: 1rem;
@@ -113,7 +113,7 @@ link:active {
 }
 
 .imgContainer {
-  width: 50%;
+  width: 25%;
   padding-top: 2rem;
 }
 
@@ -126,7 +126,8 @@ link:active {
 
 .rocketName {
   font-size: 20px;
-  margin-bottom: -0.75rem;
+  margin-bottom: -0.5rem;
+  margin-top: -0.1rem;
 }
 
 .reserveStatus {

@@ -6,10 +6,10 @@ const CANCEL_RESERVE = 'Space_Travelers/rockets/CANCEL_RESERVE';
 
 const initialState = [];
 
-// let isLoading = false;
+let isLoading = false;
 
 const getRockets = () => async (dispatch) => {
-  // if (isLoading) return;
+  if (isLoading) return;
   const result = await fetchRockets();
   const rockets = result.map((rocket) => ({
     id: rocket.rocket_id,
@@ -21,7 +21,8 @@ const getRockets = () => async (dispatch) => {
     type: GET_ROCKETS,
     payload: rockets,
   });
-  // isLoading = true;
+  console.log('i am being called');
+  isLoading = true;
 };
 
 const reserveRocket = (id) => ({

@@ -11,19 +11,17 @@ import RocketsContainer from './pages/RocketsContainer';
 import ProfileContainer from './pages/ProfileContainer';
 
 const App = () => (
-  <main>
-    <Router>
-      <header>
-        <Navbar />
-        <hr />
-      </header>
-      <Routes>
-        <Route path="/" element={<RocketsContainer />} />
-        <Route path="/missions" element={<MissionsContainer />} />
-        <Route path="/profile" element={<ProfileContainer />} />
-      </Routes>
-    </Router>
-  </main>
+  <Router basename={process.env.PUBLIC_URL}>
+    <header>
+      <Navbar />
+      <hr />
+    </header>
+    <Routes>
+      <Route path="/" element={<RocketsContainer />} />
+      <Route path="/missions" element={<MissionsContainer />} />
+      <Route path="/profile" element={<ProfileContainer />} />
+    </Routes>
+  </Router>
 );
 
 export default App;

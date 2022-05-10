@@ -13,7 +13,7 @@ const RocketItem = (props) => {
           <span className="reserveStatus">Reserved</span>
           {rocket.description}
         </p>
-        <button className="reservedButton" type="button">Reserve Rocket</button>
+        <button className="reserveButton" type="button">Reserve Rocket</button>
       </div>
     </div>
   );

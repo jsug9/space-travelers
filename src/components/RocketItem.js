@@ -9,9 +9,9 @@ const RocketItem = (props) => {
       <img className="imgContainer" src={rocket.flickrImage} alt="Rocket" />
       <div className="descriptionContainer">
         <h2 className="rocketName">{rocket.rocket_name}</h2>
-        <p>
+        <p className="rocketDescription">
           <span className="reserveStatus">Reserved</span>
-          <span className="rocketDescription">{rocket.description}</span>
+          {rocket.description}
         </p>
         <button className="reserveButton" type="button">Reserve Rocket</button>
       </div>

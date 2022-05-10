@@ -186,11 +186,24 @@ link:active {
 }
 
 .profileMissions {
-  background: red;
   width: 50%;
 }
 
 .profileRockets {
-  background: blue;
   width: 50%;
+}
+
+.profileH2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.profileLi {
+  list-style-type: none;
+  border: 1px solid rgb(29, 28, 28);
+  color: black;
+  margin-top: -1px;
+  margin-left: -2.5rem;
+  margin-right: 2rem;
+  padding: 1rem 1rem;
 }

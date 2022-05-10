@@ -1,10 +1,10 @@
 const ProfileRockets = () => (
   <div className="profileRockets">
-    <h2>My Rockets</h2>
+    <h2 className="profileH2">My Rockets</h2>
     <ul>
-      <li>Test</li>
-      <li>Test</li>
-      <li>Test</li>
+      <li className="profileLi">Test</li>
+      <li className="profileLi">Test</li>
+      <li className="profileLi">Test</li>
     </ul>
   </div>
 );

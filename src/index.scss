@@ -1,3 +1,5 @@
+$generalPadding: 0 3rem;
+
 body {
   margin: 0;
   font-family:
@@ -14,14 +16,91 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: $generalPadding;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
 }
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+// HEADER
+header {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+hr {
+  margin-top: -1.5rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  width: 105%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.rightNav {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-left: -2rem;
+}
+
+.links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+  justify-items: baseline;
+  gap: 1rem;
+}
+
+li {
+  text-decoration: none;
+}
+
+.link,
+link:active {
+  color: #7aaaf9;
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.linkLi:nth-child(3) {
+  padding-left: 1rem;
+  border-left: solid 1px black;
+}
+
+// MISSIONS
+
+// ROCKETS
+
+// MY PROFILE

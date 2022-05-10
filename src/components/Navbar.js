@@ -23,14 +23,17 @@ const Navbar = () => {
 
   return (
     <nav>
-      <img src={logo} alt="logo" className="logo" />
-      <h3>Space Travelers</h3>
+      <div className="rightNav">
+        <img src={logo} alt="logo" className="logo" />
+        <h1>Space Travelers&apos; Hub</h1>
+      </div>
       <ul className="links">
         {links.map((link) => (
-          <li key={link.id}>
+          <li key={link.id} className="linkLi">
             <NavLink
               to={link.path}
               className="link"
+              activeClassName="active"
             >
               {link.text}
             </NavLink>

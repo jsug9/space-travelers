@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { reserveRocket } from '../redux/rockets/rockets';
+import { reserveRocket, cancelReserve } from '../redux/rockets/rockets';
 
 const RocketItem = (props) => {
   const dispatch = useDispatch();
@@ -9,7 +9,7 @@ const RocketItem = (props) => {
   const reserveButtonText = rocket.isReserved ? 'Cancel Reservation' : 'Reserve Rocket';
   const reservedRocketStatus = (id) => {
     if (rocket.isReserved) {
-      console.log('Cancel rocket');
+      dispatch(cancelReserve(id));
     } else {
       dispatch(reserveRocket(id));
     }

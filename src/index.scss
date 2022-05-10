@@ -180,3 +180,17 @@ link:active {
 }
 
 // MY PROFILE
+.profileContainer {
+  display: flex;
+  width: 100%;
+}
+
+.profileMissions {
+  background: red;
+  width: 50%;
+}
+
+.profileRockets {
+  background: blue;
+  width: 50%;
+}

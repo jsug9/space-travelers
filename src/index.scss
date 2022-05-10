@@ -131,8 +131,8 @@ link:active {
 }
 
 .reserveStatus {
-  background-color: #4d9fb6;
   color: white;
+  background: #4d9fb6;
   text-align: center;
   border-radius: 4px;
   font-size: 13px;
@@ -140,15 +140,38 @@ link:active {
   margin-right: 0.3rem;
 }
 
-.reserveButton {
+.reservedButton {
   padding: 0.6rem;
   color: white;
-  background-color: #3679f6;
+  background: #3679f6;
   border: none;
   border-radius: 5px;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
+}
+
+.reservedButton:hover {
+  background: white;
+  color: #3679f6;
+  border: 1px solid #3679f6;
+}
+
+.nonReservedButton {
+  padding: 0.6rem;
+  color: #9ea1A7;
+  background: white;
+  border: 1px solid #9ea1A7;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nonReservedButton:hover {
+  background: #9ea1A7;
+  color: white;
+  border: 1px solid #9ea1A7;
 }
 
 // MY PROFILE

@@ -6,14 +6,15 @@ const RocketItem = (props) => {
 
   return (
     <div className="rocketItemContainer">
-      {/* <img className="imgContainer" src={rocket.flickrImage} alt="Rocket" /> */}
+      <img className="imgContainer" src={rocket.flickrImage} alt="Rocket" />
       <div className="descriptionContainer">
         <h2 className="rocketName">{rocket.rocket_name}</h2>
         <p>
           <span className="reserveStatus">Reserved</span>
+          <span> </span>
           <span className="rocketDescription">{rocket.description}</span>
         </p>
-        <button className="reserveButton" type="button">Reserve</button>
+        <button className="reserveButton" type="button">Reserve Rocket</button>
       </div>
     </div>
   );

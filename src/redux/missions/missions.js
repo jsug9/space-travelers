@@ -10,9 +10,9 @@ export const getMissions = () => async (dispatch) => {
   if (isLoading) return;
   const result = await fetchMissions();
   const missions = result.map((mission) => ({
-    id: mission.mission_id,
-    name: mission.mission_name,
-    description: mission.description,
+    mission_id: mission.mission_id,
+    mission_name: mission.mission_name,
+    mission_description: mission.description,
   }));
   dispatch({
     type: GET_MISSIONS,

@@ -23,6 +23,6 @@
   "ignorePatterns": [
     "dist/",
     "build/",
-    "__tests__"
+    "__snapshots__"
   ]
 }

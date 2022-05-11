@@ -14,6 +14,7 @@ export const getMissions = () => async (dispatch) => {
     mission_id: mission.mission_id,
     mission_name: mission.mission_name,
     mission_description: mission.description,
+    isJoined: false,
   }));
   dispatch({
     type: GET_MISSIONS,
@@ -22,11 +23,25 @@ export const getMissions = () => async (dispatch) => {
   isLoading = true;
 };
 
-export const joinMission = (id) => (
-  {
-    type: JOIN_MISSION,
-    id,
+export const joinMission = (id) => ({
+  type: JOIN_MISSION,
+  id,
+});
+
+const missionStatus = (state, id, status) => {
+  const newState = state.map((mission) => {
+    if (mission.mission_id !== id) {
+      return mission;
+    }
+    return {
+      mission_id: mission.mission_id,
+      mission_name: mission.mission_name,
+      mission_description: mission.mission_description,
+      isJoined: status,
+    };
   });
+  return newState;
+};
 
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -34,9 +49,7 @@ const missionsReducer = (state = initialState, action) => {
       return action.payload;
     case JOIN_MISSION: {
       console.log(state);
-      return state.map((mission) => (mission.mission_id === action.id
-        ? { ...mission, reserved: true }
-        : mission));
+      return missionStatus(state, action.id, true);
     }
     default:
       return state;

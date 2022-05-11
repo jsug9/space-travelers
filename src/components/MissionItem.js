@@ -10,6 +10,7 @@ const MissionItem = (props) => {
   const dispatch = useDispatch();
   const clickHandler = () => {
     dispatch(joinMission(mission.mission_id));
+    console.log(mission);
   };
 
   return (
@@ -27,6 +28,7 @@ MissionItem.propTypes = {
     mission_id: PropTypes.string.isRequired,
     mission_name: PropTypes.string.isRequired,
     mission_description: PropTypes.string,
+    isJoined: PropTypes.bool,
   }).isRequired,
 };
 

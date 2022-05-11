@@ -1,19 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReserveButton from './ReserveButton';
 
 const RocketItem = (props) => {
   const { rocket } = props;
+  const badgeClass = rocket.isReserved ? 'reserveBadge' : 'reserveBadgeDisabled';
 
   return (
     <div className="rocketItemContainer">
-      <img className="imgContainer" src={rocket.flickrImage} alt="Rocket" />
+      <img className="imgContainer" src={rocket.image} alt="Rocket" />
       <div className="descriptionContainer">
-        <h2 className="rocketName">{rocket.rocket_name}</h2>
+        <h2 className="rocketName">{rocket.name}</h2>
         <p className="rocketDescription">
-          <span className="reserveStatus">Reserved</span>
+          <span className={badgeClass}>Reserved</span>
           {rocket.description}
+          <br />
+          <a
+            href={rocket.wikiLink}
+            target="_blank"
+            rel="noreferrer"
+            className="readMore"
+          >
+            Read more
+          </a>
         </p>
-        <button className="reserveButton" type="button">Reserve Rocket</button>
+        <ReserveButton isReserved={rocket.isReserved} id={rocket.id} />
       </div>
     </div>
   );
@@ -21,10 +32,12 @@ const RocketItem = (props) => {
 
 RocketItem.propTypes = {
   rocket: PropTypes.exact({
-    rocket_id: PropTypes.string,
-    rocket_name: PropTypes.string,
+    id: PropTypes.string,
+    name: PropTypes.string,
     description: PropTypes.string,
-    flickrImage: PropTypes.string,
+    wikiLink: PropTypes.string,
+    image: PropTypes.string,
+    isReserved: PropTypes.bool,
   }).isRequired,
 };
 

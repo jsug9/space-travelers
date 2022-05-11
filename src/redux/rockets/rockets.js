@@ -15,7 +15,9 @@ const getRockets = () => async (dispatch) => {
     id: rocket.rocket_id,
     name: rocket.rocket_name,
     description: rocket.description,
+    wikiLink: rocket.wikipedia,
     image: rocket.flickr_images[0],
+    isReserved: false,
   }));
   dispatch({
     type: GET_ROCKETS,
@@ -36,8 +38,17 @@ const cancelReserve = (id) => ({
 
 const reserveStatus = (state, id, status) => {
   const newState = state.map((rocket) => {
-    if (rocket.id !== id) { return rocket; }
-    return { ...rocket, reserved: status };
+    if (rocket.id !== id) {
+      return rocket;
+    }
+    return {
+      id: rocket.id,
+      name: rocket.name,
+      description: rocket.description,
+      wikiLink: rocket.wikiLink,
+      image: rocket.image,
+      isReserved: status,
+    };
   });
   return newState;
 };

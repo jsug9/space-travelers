@@ -136,7 +136,8 @@ link:active {
   text-align: center;
   border-radius: 4px;
   font-size: 13px;
-  padding: 0 0.3rem;
+  font-weight: 500;
+  padding: 0.01rem 0.3rem;
   margin-right: 0.3rem;
 }
 
@@ -179,3 +180,56 @@ link:active {
 }
 
 // MY PROFILE
+.profileContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.profileSubContainer {
+  width: 48%;
+}
+
+.profileH2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.profileLi {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #9b9a9a;
+  color: black;
+  margin-top: -1px;
+  margin-left: -2.5rem;
+  padding: 1rem 1rem;
+  height: 4rem;
+}
+
+.emptyLi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  border: 1px solid #9b9a9a;
+  color: #9b9a9a;
+  margin-top: -1px;
+  margin-left: -2.5rem;
+  margin-right: 2rem;
+  padding: 1rem 1rem;
+  height: 16rem;
+}
+
+.profileLiLeft {
+  margin: 0;
+}
+
+.readMore {
+  color: #7aaaf9;
+}
+
+.readMore:hover {
+  color: #3679f6;
+}

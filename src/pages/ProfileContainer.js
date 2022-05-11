@@ -1,5 +1,11 @@
+import ProfileMissions from '../components/ProfileMissions';
+import ProfileRockets from '../components/ProfileRockets';
+
 const ProfileContainer = () => (
-  <p>I work too</p>
+  <div className="profileContainer">
+    <ProfileMissions />
+    <ProfileRockets />
+  </div>
 );
 
 export default ProfileContainer;

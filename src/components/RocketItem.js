@@ -1,21 +1,9 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { reserveRocket } from '../redux/rockets/rockets';
+import ReserveButton from './ReserveButton';
 
 const RocketItem = (props) => {
-  const dispatch = useDispatch();
   const { rocket } = props;
-  const reserveButtonText = rocket.isReserved ? 'Cancel Reservation' : 'Reserve Rocket';
-  const reservedRocketStatus = (id) => {
-    if (rocket.isReserved) {
-      console.log('Cancel rocket');
-    } else {
-      dispatch(reserveRocket(id));
-    }
-  };
-
-  const reserveButtonClass = rocket.isReserved ? 'cancelButton' : 'reserveButton';
   const badgeClass = rocket.isReserved ? 'reserveBadge' : 'reserveBadgeDisabled';
 
   return (
@@ -26,8 +14,17 @@ const RocketItem = (props) => {
         <p className="rocketDescription">
           <span className={badgeClass}>Reserved</span>
           {rocket.description}
+          <br />
+          <a
+            href={rocket.wikiLink}
+            target="_blank"
+            rel="noreferrer"
+            className="readMore"
+          >
+            Read more
+          </a>
         </p>
-        <button className={reserveButtonClass} type="button" onClick={() => reservedRocketStatus(rocket.id)}>{reserveButtonText}</button>
+        <ReserveButton isReserved={rocket.isReserved} id={rocket.id} />
       </div>
     </div>
   );
@@ -38,6 +35,7 @@ RocketItem.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
     description: PropTypes.string,
+    wikiLink: PropTypes.string,
     image: PropTypes.string,
     isReserved: PropTypes.bool,
   }).isRequired,

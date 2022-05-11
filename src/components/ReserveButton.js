@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { bool } from 'prop-types';
+import { bool, string } from 'prop-types';
 import { reserveRocket, cancelReserve } from '../redux/rockets/rockets';
 
 const ReserveButton = (props) => {
@@ -22,7 +22,7 @@ const ReserveButton = (props) => {
 
 ReserveButton.propTypes = {
   isReserved: bool.isRequired,
-  id: String.isRequired,
+  id: string.isRequired,
 };
 
 export default ReserveButton;

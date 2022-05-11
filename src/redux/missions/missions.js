@@ -1,6 +1,7 @@
 import { fetchMissions } from '../APIcall';
 
 const GET_MISSIONS = 'Space_Travelers/missions/GET_MISSIONS';
+const JOIN_MISSION = 'Space_Travelers/missions/JOIN_MISSION';
 
 const initialState = [];
 
@@ -13,6 +14,7 @@ export const getMissions = () => async (dispatch) => {
     mission_id: mission.mission_id,
     mission_name: mission.mission_name,
     mission_description: mission.description,
+    isJoined: false,
   }));
   dispatch({
     type: GET_MISSIONS,
@@ -21,11 +23,32 @@ export const getMissions = () => async (dispatch) => {
   isLoading = true;
 };
 
+export const joinMission = (id) => ({
+  type: JOIN_MISSION,
+  id,
+});
+
+const missionStatus = (state, id, status) => {
+  const newState = state.map((mission) => {
+    if (mission.mission_id !== id) {
+      return mission;
+    }
+    return {
+      mission_id: mission.mission_id,
+      mission_name: mission.mission_name,
+      mission_description: mission.mission_description,
+      isJoined: status,
+    };
+  });
+  return newState;
+};
+
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_MISSIONS:
       return action.payload;
-
+    case JOIN_MISSION:
+      return missionStatus(state, action.id, true);
     default:
       return state;
   }

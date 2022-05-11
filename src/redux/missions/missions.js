@@ -53,12 +53,10 @@ const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_MISSIONS:
       return action.payload;
-    case JOIN_MISSION: {
+    case JOIN_MISSION:
       return missionStatus(state, action.id, true);
-    }
-    case LEAVE_MISSION: {
+    case LEAVE_MISSION:
       return missionStatus(state, action.id, false);
-    }
     default:
       return state;
   }

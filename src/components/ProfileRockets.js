@@ -13,7 +13,14 @@ const ProfileRockets = () => {
             <p className="profileLiLeft">
               {rocket.name}
               {' — '}
-              <a href={rocket.wikiLink} target="_blank" rel="noreferrer">Read more</a>
+              <a
+                href={rocket.wikiLink}
+                target="_blank"
+                rel="noreferrer"
+                className="readMore"
+              >
+                Read more
+              </a>
             </p>
             <ReserveButton isReserved={rocket.isReserved} id={rocket.id} />
           </li>

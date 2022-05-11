@@ -15,7 +15,14 @@ const RocketItem = (props) => {
           <span className={badgeClass}>Reserved</span>
           {rocket.description}
           <br />
-          <a href={rocket.wikiLink} target="_blank" rel="noreferrer">Read more</a>
+          <a
+            href={rocket.wikiLink}
+            target="_blank"
+            rel="noreferrer"
+            className="readMore"
+          >
+            Read more
+          </a>
         </p>
         <ReserveButton isReserved={rocket.isReserved} id={rocket.id} />
       </div>

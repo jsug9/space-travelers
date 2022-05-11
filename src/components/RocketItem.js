@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReserveButton from './ReserveButton';
 
 const RocketItem = (props) => {
   const { rocket } = props;
+  const badgeClass = rocket.isReserved ? 'reserveBadge' : 'reserveBadgeDisabled';
 
   return (
     <div className="rocketItemContainer">
@@ -10,10 +12,19 @@ const RocketItem = (props) => {
       <div className="descriptionContainer">
         <h2 className="rocketName">{rocket.name}</h2>
         <p className="rocketDescription">
-          <span className="reserveStatus">Reserved</span>
+          <span className={badgeClass}>Reserved</span>
           {rocket.description}
+          <br />
+          <a
+            href={rocket.wikiLink}
+            target="_blank"
+            rel="noreferrer"
+            className="readMore"
+          >
+            Read more
+          </a>
         </p>
-        <button className="reserveButton" type="button">Reserve Rocket</button>
+        <ReserveButton isReserved={rocket.isReserved} id={rocket.id} />
       </div>
     </div>
   );
@@ -24,7 +35,9 @@ RocketItem.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
     description: PropTypes.string,
+    wikiLink: PropTypes.string,
     image: PropTypes.string,
+    isReserved: PropTypes.bool,
   }).isRequired,
 };
 

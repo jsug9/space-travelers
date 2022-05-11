@@ -37,6 +37,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-items: center;
+  margin-bottom: 1rem;
 }
 
 hr {
@@ -50,7 +51,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .rightNav {

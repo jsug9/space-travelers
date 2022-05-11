@@ -1,5 +1,5 @@
 const ProfileMissions = () => (
-  <div className="profileMissions">
+  <div className="profileSubContainer">
     <h2 className="profileH2">My Missions</h2>
     <ul>
       <li className="profileLi">Test</li>

@@ -182,15 +182,12 @@ link:active {
 // MY PROFILE
 .profileContainer {
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
-.profileMissions {
-  width: 50%;
-}
-
-.profileRockets {
-  width: 50%;
+.profileSubContainer {
+  width: 48%;
 }
 
 .profileH2 {
@@ -207,7 +204,6 @@ link:active {
   color: black;
   margin-top: -1px;
   margin-left: -2.5rem;
-  margin-right: 2rem;
   padding: 1rem 1rem;
   height: 4rem;
 }

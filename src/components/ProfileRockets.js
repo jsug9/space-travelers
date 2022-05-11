@@ -24,7 +24,7 @@ const ProfileRockets = () => {
   };
 
   return (
-    <div className="profileRockets">
+    <div className="profileSubContainer">
       <h2 className="profileH2">My Rockets</h2>
       <ul>
         {renderList()}

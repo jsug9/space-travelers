@@ -69,5 +69,12 @@ const rocketsReducer = (state = initialState, action) => {
   }
 };
 
-export { getRockets, reserveRocket, cancelReserve };
+export {
+  getRockets,
+  reserveRocket,
+  cancelReserve,
+  GET_ROCKETS,
+  RESERVE_ROCKET,
+  CANCEL_RESERVE,
+};
 export default rocketsReducer;

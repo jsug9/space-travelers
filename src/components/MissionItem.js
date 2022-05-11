@@ -16,13 +16,26 @@ const MissionItem = (props) => {
     }
   };
 
+  const badgeRender = () => {
+    if (mission.isJoined) {
+      return <Badge bg="primary">Active Member</Badge>;
+    }
+    return <Badge bg="secondary">Not a member</Badge>;
+  };
+
   return (
     <tr>
       <th><h3>{mission.mission_name}</h3></th>
       <th><p>{mission.mission_description}</p></th>
-      <th className="align-middle"><Badge bg="primary">Active Member</Badge></th>
       <th className="align-middle">
-        <Button onClick={clickHandler} type="button" variant="outline-secondary">
+        {badgeRender()}
+      </th>
+      <th className="align-middle">
+        <Button
+          onClick={clickHandler}
+          type="button"
+          variant={(mission.isJoined) ? 'outline-danger' : 'outline-secondary'}
+        >
           {(mission.isJoined) ? 'Leave ' : 'Join '}
           Mission
         </Button>

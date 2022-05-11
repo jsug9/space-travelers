@@ -26,6 +26,8 @@ const RocketItem = (props) => {
         <p className="rocketDescription">
           <span className={badgeClass}>Reserved</span>
           {rocket.description}
+          <br />
+          <a href={rocket.wikiLink} target="_blank" rel="noreferrer">Read more</a>
         </p>
         <button className={reserveButtonClass} type="button" onClick={() => reservedRocketStatus(rocket.id)}>{reserveButtonText}</button>
       </div>
@@ -38,6 +40,7 @@ RocketItem.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
     description: PropTypes.string,
+    wikiLink: PropTypes.string,
     image: PropTypes.string,
     isReserved: PropTypes.bool,
   }).isRequired,

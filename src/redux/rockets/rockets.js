@@ -15,6 +15,7 @@ const getRockets = () => async (dispatch) => {
     id: rocket.rocket_id,
     name: rocket.rocket_name,
     description: rocket.description,
+    wikiLink: rocket.wikipedia,
     image: rocket.flickr_images[0],
     isReserved: false,
   }));

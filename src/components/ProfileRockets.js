@@ -10,6 +10,8 @@ const ProfileRockets = () => {
         {rockets.filter((rocket) => rocket.isReserved).map((rocket) => (
           <li key={rocket.id} className="profileLi">
             {rocket.name}
+            {' — '}
+            <a href={rocket.wikiLink} target="_blank" rel="noreferrer">Read more</a>
           </li>
         ))}
       </ul>

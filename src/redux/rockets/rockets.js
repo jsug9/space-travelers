@@ -45,6 +45,7 @@ const reserveStatus = (state, id, status) => {
       id: rocket.id,
       name: rocket.name,
       description: rocket.description,
+      wikiLink: rocket.wikiLink,
       image: rocket.image,
       isReserved: status,
     };

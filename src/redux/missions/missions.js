@@ -48,7 +48,6 @@ const missionsReducer = (state = initialState, action) => {
     case GET_MISSIONS:
       return action.payload;
     case JOIN_MISSION: {
-      console.log(state);
       return missionStatus(state, action.id, true);
     }
     default:

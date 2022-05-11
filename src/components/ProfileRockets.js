@@ -3,12 +3,12 @@ import ReserveButton from './ReserveButton';
 
 const ProfileRockets = () => {
   const rockets = useSelector((state) => state.rockets);
+  const filteredRockets = rockets.filter((rocket) => rocket.isReserved);
 
-  return (
-    <div className="profileRockets">
-      <h2 className="profileH2">My Rockets</h2>
-      <ul>
-        {rockets.filter((rocket) => rocket.isReserved).map((rocket) => (
+  const renderList = () => {
+    if (filteredRockets.length) {
+      return (
+        filteredRockets.map((rocket) => (
           <li key={rocket.id} className="profileLi">
             <p className="profileLiLeft">
               {rocket.name}
@@ -17,7 +17,17 @@ const ProfileRockets = () => {
             </p>
             <ReserveButton isReserved={rocket.isReserved} id={rocket.id} />
           </li>
-        ))}
+        ))
+      );
+    }
+    return <li className="emptyLi">No rockets reserved</li>;
+  };
+
+  return (
+    <div className="profileRockets">
+      <h2 className="profileH2">My Rockets</h2>
+      <ul>
+        {renderList()}
       </ul>
     </div>
   );

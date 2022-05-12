@@ -62,4 +62,5 @@ const missionsReducer = (state = initialState, action) => {
   }
 };
 
+export { GET_MISSIONS, JOIN_MISSION, LEAVE_MISSION };
 export default missionsReducer;

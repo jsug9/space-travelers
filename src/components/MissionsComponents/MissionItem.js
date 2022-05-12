@@ -1,20 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
 import Badge from 'react-bootstrap/Badge';
-import Button from 'react-bootstrap/Button';
-import { joinMission, leaveMission } from '../../redux/missions/missions';
+import JoinButton from './JoinButton';
 
 const MissionItem = (props) => {
   const { mission } = props;
-  const dispatch = useDispatch();
-  const clickHandler = () => {
-    if (!mission.isJoined) {
-      dispatch(joinMission(mission.mission_id));
-    } else {
-      dispatch(leaveMission(mission.mission_id));
-    }
-  };
 
   const badgeRender = () => {
     if (mission.isJoined) {
@@ -41,14 +31,7 @@ const MissionItem = (props) => {
         {badgeRender()}
       </th>
       <th className="align-middle">
-        <Button
-          onClick={clickHandler}
-          type="button"
-          variant={(mission.isJoined) ? 'outline-danger' : 'outline-secondary'}
-        >
-          {(mission.isJoined) ? 'Leave ' : 'Join '}
-          Mission
-        </Button>
+        <JoinButton isJoined={mission.isJoined} id={mission.mission_id} />
       </th>
     </tr>
   );

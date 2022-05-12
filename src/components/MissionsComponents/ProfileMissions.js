@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import JoinButton from './JoinButton';
 
 const ProfileMissions = () => {
   const missions = useSelector((state) => state.missions);
@@ -11,7 +12,17 @@ const ProfileMissions = () => {
           <li key={mission.mission_id} className="profileLi">
             <p className="profileLiLeft">
               {mission.mission_name}
+              {' — '}
+              <a
+                href={mission.wikipedia}
+                target="_blank"
+                rel="noreferrer"
+                className="readMore"
+              >
+                Read more
+              </a>
             </p>
+            <JoinButton isJoined={mission.isJoined} id={mission.mission_id} />
           </li>
         ))
       );

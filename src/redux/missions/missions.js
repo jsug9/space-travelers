@@ -15,6 +15,7 @@ export const getMissions = () => async (dispatch) => {
     mission_id: mission.mission_id,
     mission_name: mission.mission_name,
     mission_description: mission.description,
+    wikipedia: mission.wikipedia,
     isJoined: false,
   }));
   dispatch({
@@ -43,6 +44,7 @@ const missionStatus = (state, id, status) => {
       mission_id: mission.mission_id,
       mission_name: mission.mission_name,
       mission_description: mission.mission_description,
+      wikipedia: mission.wikipedia,
       isJoined: status,
     };
   });

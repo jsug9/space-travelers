@@ -26,7 +26,17 @@ const MissionItem = (props) => {
   return (
     <tr>
       <th><h3>{mission.mission_name}</h3></th>
-      <th><p>{mission.mission_description}</p></th>
+      <th>
+        <p>{mission.mission_description}</p>
+        <a
+          href={mission.wikipedia}
+          target="_blank"
+          rel="noreferrer"
+          className="readMore"
+        >
+          Read more
+        </a>
+      </th>
       <th className="align-middle">
         {badgeRender()}
       </th>
@@ -49,6 +59,7 @@ MissionItem.propTypes = {
     mission_id: PropTypes.string,
     mission_name: PropTypes.string,
     mission_description: PropTypes.string,
+    wikipedia: PropTypes.string,
     isJoined: PropTypes.bool,
   }).isRequired,
 };

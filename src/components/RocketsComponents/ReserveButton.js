@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { bool, string } from 'prop-types';
-import { reserveRocket, cancelReserve } from '../redux/rockets/rockets';
+import { reserveRocket, cancelReserve } from '../../redux/rockets/rockets';
 
 const ReserveButton = (props) => {
   const { isReserved, id } = props;

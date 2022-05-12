@@ -1,4 +1,4 @@
-import MissionsList from '../components/MissionsList';
+import MissionsList from '../components/MissionsComponents/MissionsList';
 
 const MissionsContainer = () => (
   <MissionsList />

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
-import { joinMission, leaveMission } from '../redux/missions/missions';
+import { joinMission, leaveMission } from '../../redux/missions/missions';
 
 const MissionItem = (props) => {
   const { mission } = props;

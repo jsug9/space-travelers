@@ -9,7 +9,7 @@
 - SCSS
 - JavaScript
 - React
-- Reduxx
+- Redux
 
 ## Live Demo
 
